@@ -6,6 +6,11 @@
     --primary-color: #0f1b4c;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 html {
     font-size: 62.5%;
 }
@@ -46,17 +51,27 @@ a {
 }
 
 /* ============ Header ============== */
-.header {
-    position: relative;
+.fix-header {
     background: #e6f0ff;
-    height: 100vh;
+    padding-top: 26px;
+    position: sticky;
+    top: -26px;
+    z-index: 1;
+}
+
+.hero-wrap {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #e6f0ff;
+    height: calc(100vh - 90px);
 }
 
 .navbar {
     display: flex;
     align-items: center;
-    padding-top: 38px;
-}
+    padding: 12px 0;
+}  
 
 .navbar ul {
     display: flex;
@@ -99,6 +114,7 @@ a {
 
 .hero {
     margin-top: 130px;
+    scroll-margin-top: 300px;
 }
 
 .hero .info {
@@ -190,6 +206,7 @@ a {
 .guides {
     margin-top: 40px;
     padding: 33px 0 79px;
+    scroll-margin-top: 180px;
 }
 
 .guides .sub-title {
@@ -573,6 +590,7 @@ a {
 .footer {
     margin-top: 55px;
     padding: 50px 0 58px;
+    scroll-margin-top: 450px;
 }
 
 .footer .row {
